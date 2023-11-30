@@ -1,0 +1,1163 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{eumat}
+
+\begin{document}
+\begin{eulernotebook}
+\begin{eulercomment}
+Nama : Amalia Intan Arvitasari\\
+Kelas: Matematika B\\
+NIM  : 22305144026
+
+\end{eulercomment}
+\eulersubheading{Sub Topik 5 : Perhitungan Analisis Data Statistika Deskriptif}
+\begin{eulercomment}
+Pada sub topik 5 part 1 ini akan dibahas mengenai:\\
+1. Penjelasan umum mengenai statistika deskriptif\\
+2. Ruang lingkup kajian pada analisis statistika deskriptif yang
+meliputi distribusi frekuensi, mean, median, dan modus.
+
+\end{eulercomment}
+\eulersubheading{Penjelasan Umum Mengenai statistika Deskriptif}
+\begin{eulercomment}
+Statistika deskriptif yaitu statistik yang mempelajari tata cara
+mengumpulkan, menyusun, menyajikan, dan menganalisis data yang
+berwujud angka agar dapat memberikan gambaran yang teratur, ringkas,
+dan jelas mengenai suatu gejala atau keadaan peristiwa. Analisis ini
+hanya berupa akumulasi data dasar dalam bentuk deskripsi semata dalam
+arti tidak mencari atau menerangkan saling hubungan, menguji
+hipotesis, membuat ramalan atau melakukan penarikan kesimpulan.
+Analisis data yang tergolong statistik deskriptif terdiri dari
+distribusi frekuensi, ukuran pemusatan data(mean,median,modus), ukuran
+letak(kuartil,desil,persentil), ukuran dispersi(jangkauan atau
+rentang,varians,simpangan baku), dan teknis statistik lain yang
+bertujuan hanya untuk mengetahui gambaran atau kecenderungan data
+tanpa bermaksud melakukan generalisasi.
+
+\end{eulercomment}
+\eulersubheading{Distribusi Frekuensi}
+\begin{eulercomment}
+Distribusi frekuensi merupakan ruang lingkup kajian pada analisis
+statistik deskriptif. Distribusi frekuensi adalah alat penyajian data
+berbentuk kolom dan lajur (tabel)yang di dalamnya dibuat angka yang
+menggambarkan pancaran frekuensi dari variabel yang sedang menjadi
+objek. Unsur-unsur distribusi frekuensi yaitu kelas(kelompok nilai
+data yang ditulis dalam bentuk interval),batas bawah(jangkauan
+terendah dari kelas),batas atas(jangkauan tertinggi dari kelas),tepi
+bawah kelas(batas bawah dikurangi ketelitian data),tepi atas
+kelas(batas atas kelas ditambah ketelitian data),banyak kelas(1+3,3
+log n),dan panjang kelas.\\
+Dalam statistik terdapat berbagai macam distribusi frekuensi,
+diantaranya:\\
+1. Distribusi frekuensi biasa\\
+\end{eulercomment}
+\begin{eulerttcomment}
+   Distribusi frekuensi biasa adalah distribusi
+   frekuensi yang berisikan jumlah frekuensi
+   dari setiap kelompok data atau kelas.
+\end{eulerttcomment}
+\begin{eulercomment}
+2. Distribusi frekuensi relatif\\
+\end{eulercomment}
+\begin{eulerttcomment}
+   Distribusi frekuensi relatif adalah
+   distribusi frekuensi yang dinyatakan dalam
+   bentuk persentase atau desimal. Besarnya
+   frekuensi relatif yaitu frekuensi absolut
+   setiap kelas dibagi total frekuensi dikali
+   100%.
+\end{eulerttcomment}
+\begin{eulercomment}
+3. Distribusi frekuensi kumulatif\\
+\end{eulercomment}
+\begin{eulerttcomment}
+   Menunjukkan seberapa besar jumlah frekuensi
+   pada tingkat kelas tertentu yang diperoleh
+   dengan menjumlahkan atau mengurangkan
+   frekuensi pada kelas tertentu dengan
+   frekuensi kelas sebelumnya. Distribusi
+   frekuensi kumulatif terdiri dari 2 macam
+   yaitu distribusi kumulatif kurang dari dan
+   distribusi kumulatif lebih dari.
+\end{eulerttcomment}
+\begin{eulercomment}
+
+Contoh Soal 1:\\
+1.Disajikan data urut yaitu
+45,48,49,50,52,52,52,53,53,54,54,54,54,54,56,56,
+56,56,57,57,58,58,58,58,58,58,58,59,59,60,60,60,
+62,62,62,63,63,64,64,65,67,68,69,70,70,71,73,74.\\
+Buatlah distribusi frekuensi berdasarkan data diatas!\\
+Penyeleaian:\\
+\end{eulercomment}
+\begin{eulerttcomment}
+         - Menentukan range
+           range= nilai maks-nilai min
+                = 74-45
+                = 29
+         - Menentukan banyak kelas dengan aturan
+           struges.
+           = 1+3,3 log n, n banyaknya data
+           = 1+3,3 log 48
+           = 6,64
+           = 7
+         - Menentukan panjang kelas
+\end{eulerttcomment}
+\begin{eulerformula}
+\[
+p=\frac {range}{banyak kelas}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+p=\frac {29}{7}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+p= 4.14=5
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Berdasarkan pertimbangan beberapa unsur dalam data urut diatas yaitu
+nilai minimum 45, nilai maksimum 74, banyak kelas yaitu 7, dan panjang
+kelas yaitu 5 maka dapat dibuat tabel distribusi frekuensi dengan
+batas bawah kelas pertama yaitu 43 dan batas atas kelas ketujuh yaitu
+77. Sehingga dapat ditentukan tepi bawah kelas pertama yaitu
+43-0.5=42.5 dan tepi atas kelas ketujuh yaitu 77+0.5=77.5.
+\end{eulercomment}
+\begin{eulerprompt}
+>r=42.5:5:77.5; v=[1,6,13,15,6,5,2];
+>T:=r[1:7]' | r[2:8]' | v'; writetable(T,labc=["TB","TA","Frek"])
+\end{eulerprompt}
+\begin{euleroutput}
+          TB        TA      Frek
+        42.5      47.5         1
+        47.5      52.5         6
+        52.5      57.5        13
+        57.5      62.5        15
+        62.5      67.5         6
+        67.5      72.5         5
+        72.5      77.5         2
+\end{euleroutput}
+\begin{eulercomment}
+Mencari titik tengah 
+\end{eulercomment}
+\begin{eulerprompt}
+>(T[,1]+T[,2])/2 // the midpoint of each interval 
+\end{eulerprompt}
+\begin{euleroutput}
+             45 
+             50 
+             55 
+             60 
+             65 
+             70 
+             75 
+\end{euleroutput}
+\begin{eulercomment}
+Sajian dalam bentuk histogram
+\end{eulercomment}
+\begin{eulerprompt}
+>plot2d(r,v,a=40,b=80,c=0,d=20,bar=1,style="\(\backslash\)/"):
+\end{eulerprompt}
+\eulerimg{29}{images/SubTopik 5.1_Amalia Intan Arvitasari_22305144026_Mat B-004.png}
+\eulersubheading{Rata-Rata Hitung(Mean)}
+\begin{eulercomment}
+Rata-Rata hitung biasa juga disebut sebagai rerata atau mean merupakan
+ruang lingkup kajian pada analisis statistika deskriptif yang termasuk
+dalam ukuran pemusatan data.\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\mbox{ Rata-Rata hitung ini disimbolkan dengan } {\mu} \mbox{ untuk data populasi } dan
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\bar {X} \mbox{ untuk data sampel }.
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Rata-rata hitung atau mean merupakan nilai yang menunjukkan pusat dari
+nilai data dan dapat mewakili keterpusatan data. Mean dapat diperoleh
+dengan membagi jumlah nilai-nilai data dengan jumlah individu(cacah
+data). Perhitungan mean dibagi dua yaitu mean data tunggal dan mean
+data kelompok.\\
+\end{eulercomment}
+\eulersubheading{1. Perhitungan mean pada data tunggal}
+\begin{eulercomment}
+Pada data tunggal, perhitungannya yaitu dengan cara menjumlahkan semua
+nilai dan dibagi banyak data. Rumus yang digunakan adalah sebagai
+berikut:\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\bar{X} = \frac{\sum x_i}{n}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\mu = \frac{\sum x_i}{N}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Keterangan:\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\bar {X}=\mbox{ Rata-Rata hitung atau mean untuk data sampel}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\mu=\mbox{ Rata-Rata hitung atau mean untuk data populasi }
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\sum x_i=\mbox{ jumlah dari nilai data ke-i }
+\]
+\end{eulerformula}
+\begin{eulerttcomment}
+           n = banyaknya data dalam sampel
+           N - banyaknya data dalam populasi
+\end{eulerttcomment}
+\begin{eulercomment}
+Data tunggal juga dapat disajikan dalam tabel distribusi.\\
+Misalnya diberikan data\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+x_1,x_2,...,x_n
+\]
+\end{eulerformula}
+\begin{eulercomment}
+yang memiliki frekuensi berturut-turut\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+f_1,f_2,...,f_n
+\]
+\end{eulerformula}
+\begin{eulercomment}
+maka rataan hitung sampel atau rataan hitung populasi dari data yang
+disajikan dalam daftar distribusi itu ditentukan dengan rumus:
+
+Untuk rata-rata hitung sampel,
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\bar{x}=\frac{\sum_{i=1}^{n} f_i x_i}{\sum_{i=1}^{n} f_i}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Untuk rata-rata hitung populasi,
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\mu=\frac{\sum_{i=1}^{n} f_i x_i}{\sum_{i=1}^{n} f_i}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Kita dapat mengetahui nilai rata-rata hitung(mean)pada data tunggal
+dengan menggunakan perintah EMT yaitu 'mean(x)' dan 'mean(x,f)'.
+
+Contoh Soal 1:\\
+1. Seorang pelatih tembak ingin mengevaluasi nilai ketangkasan delapan
+anak buahnya jenis senapan yang dipakai M-16 dengan jarak 300 meter
+dan masing-masing mendapat nilai 76,85,70,65,40,70,50,dan 80.
+Berapakah rata-rata nilai ketangkasan delapan anak tersebut?\\
+Penyelesain:
+\end{eulercomment}
+\begin{eulerprompt}
+>x=[76,85,70,65,40,70,50,80]; mean(x),
+\end{eulerprompt}
+\begin{euleroutput}
+  67
+\end{euleroutput}
+\begin{eulercomment}
+Diketahui:\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\sum x_i={76+85+70+65+40+70+80}=536
+\]
+\end{eulerformula}
+\begin{eulerttcomment}
+                 n = 8
+\end{eulerttcomment}
+\begin{eulerformula}
+\[
+\bar{X} = \frac{\sum x_i}{n}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\bar{X} = \frac{536}{8}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\bar{X} = 67
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Sehingga rata-rata nilai ketangkasan delapan anak tersebut adalah 67
+
+Contoh Soal 2:\\
+Banyaknya pegawai di 5 apotik adalah 3,5,6,4,dan 6. Dengan memandang
+data itu sebagai data populasi, hitunglah nilai rata-rata banyaknya
+pegawai di 5 apotik tersebut!\\
+Penyelesaian:
+\end{eulercomment}
+\begin{eulerprompt}
+>x=[3,5,6,4,6]; mean(x),
+\end{eulerprompt}
+\begin{euleroutput}
+  4.8
+\end{euleroutput}
+\begin{eulercomment}
+Diketahui:\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\sum x_i={3+5+6+4+6}=24
+\]
+\end{eulerformula}
+\begin{eulerttcomment}
+                        N = 5
+\end{eulerttcomment}
+\begin{eulerformula}
+\[
+\mu = \frac{\sum x_i}{N}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\mu = \frac{24}{5}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\mu = 4.8
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Sehingga nilai rata-rata banyaknya pegawai di 5 apotik tersebut adalah
+4.8
+
+Contoh Soal 3:\\
+Diberikan data berat kambing di suatu peternakan yang memelihara 50
+kambing. kambing dengan berat 45kg terdapat 5 ekor, kambing dengan
+berat 46kg terdapat 10 ekor, kambing dengan berat 47kg terdapat 6
+ekor, kambing dengan berat 48kg terdapat 9 ekor, kambing dengan berat
+49kg terdapat 7 ekor, dan kambing dengan berat 50kg terdapat 13 ekor.
+Tentukan rata-rata berat kambing di peternakan tersebut.\\
+Penyelesaian:
+\end{eulercomment}
+\begin{eulerprompt}
+>x=[45,46,47,48,49,50], f=[5,10,6,9,7,13]      //Mendeskripsikan data dan frekuensi
+\end{eulerprompt}
+\begin{euleroutput}
+  [45,  46,  47,  48,  49,  50]
+  [5,  10,  6,  9,  7,  13]
+\end{euleroutput}
+\begin{eulerprompt}
+>mean(x,f)    //Menghitung rata-rata  
+\end{eulerprompt}
+\begin{euleroutput}
+  47.84
+\end{euleroutput}
+\begin{eulercomment}
+Jadi, rata-rata berat kambing di peternakan tersebut adalah 47.84 kg
+\end{eulercomment}
+\begin{eulercomment}
+
+
+\end{eulercomment}
+\eulersubheading{2. Perhitungan mean pada data kelompok}
+\begin{eulercomment}
+Jika data yang sudah dikelompokkan dalam hitungan distribusi frekuensi
+maka data tersebut akan berbaur sehingga keaslian data itu akan hilang
+bercampur dengan data lain menurut kelasnya, hanya dalam perhitungan
+mean pada data kelompok diambil titik tengahnya untuk mewakili setiap
+kelas interval. Adapun rumus yang digunakan untuk menghitung mean pada
+data kelompok yaitu:\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\bar{X} = \frac{\sum t_i f_i}{\sum f_i}
+\]
+\end{eulerformula}
+\begin{eulerttcomment}
+   Keterangan:
+\end{eulerttcomment}
+\begin{eulerformula}
+\[
+  \sum t_i f_i = \mbox{jumlah dari perkalian antara titik tengah tiap kelas dan frekuensi tiap kelas}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\sum f_i = \mbox{jumlah dari frekuensi tiap kelas}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Kita dapat mengetahui nilai rata-rata hitung(mean) pada data kelompok
+dengan menggunakan perintah EMT yaitu 'mean(t,v)'dimana t menunjukkan
+titik tengah dan v menunjukkan frekuensi.
+
+Misalkan suatu data berkelompok terdiri dari n kelas dengan nilai
+tengah masing-masing kelas secara berturut-turut adalah\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+t_1,t_2,...,t_n
+\]
+\end{eulerformula}
+\begin{eulercomment}
+dan masing-masing frekuensinya adalah\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+f_1,f_2,...,f_n
+\]
+\end{eulerformula}
+\begin{eulercomment}
+maka untuk menghitung rata-rata data tabel distribusi seperti ini di
+EMT, dapat dilakukan dengan cara berikut:\\
+1. Menentukan tepi bawah kelas (Tb), panjang kelas (P), dan tepi atas
+kelas (Ta) dengan rumus :
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+T_b=a-0,5
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+P=(b-a)+1
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+P=\frac{range}{banyak kelas}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+T_a=b+0.5
+\]
+\end{eulerformula}
+\begin{eulercomment}
+dengan a = batas bawah kelas dan b = batas atas kelas
+
+2. Mendeskripsikan data dalam bentuk tabel, dengan perintah
+
+\textgreater{} r=tepi bawah terkecil:panjang kelas:tepi atas terbesar;
+v=[frekuensi];\\
+\textgreater{} T:=r[1:jumlah kelas]' \textbar{} r[2:jumlah kelas + 1]' \textbar{} v';
+writetable(T,labc=["tepi bawah","tepi atas","frekuensi"])
+
+3. Menghitung nilai tengah kelas, dengan perintah
+
+\textgreater{} (T[,1]+T[,2])/2
+
+4. Mengubah baris menjadi kolom
+
+\textgreater{} t=fold(r,[0.5,0.5])
+
+5. Menghitung rata-rata, dengan perintah
+
+\textgreater{} mean(t,v)
+
+Contoh Soal:\\
+1. Data berikut menunjukkan nilai yang diperoleh 50 siswa SMP 1 Playen
+pada Ujian Nasional mata pelajaran matematika.\\
+Siswa yang mendapat nilai dalam rentang 61-65 sebanyak 2 orang, dalam
+rentang 66-70 sebanyak 5 orang, dalam rentang 71-75 sebanyak 8 orang,
+dalam rentang 76-80 sebanyak 10 orang, dalam rentang 81-85 sebanyak 12
+orang, dalam rentang 86-90 sebanyak 9 orang, dan dalam rentang 91-95
+sebanyak 4 orang.\\
+Tentukan rata-rata nilai yang diperoleh 50 siswa tersebut!\\
+Penyelesaian:\\
+Menentukan tepi bawah kelas yang terkecil
+\end{eulercomment}
+\begin{eulerprompt}
+>61-0.5
+\end{eulerprompt}
+\begin{euleroutput}
+  60.5
+\end{euleroutput}
+\begin{eulercomment}
+Menentukan panjang kelas
+\end{eulercomment}
+\begin{eulerprompt}
+>(65-61)+1
+\end{eulerprompt}
+\begin{euleroutput}
+  5
+\end{euleroutput}
+\begin{eulercomment}
+Menentukan tepi atas kelas yang terbesar
+\end{eulercomment}
+\begin{eulerprompt}
+>95+0.5
+\end{eulerprompt}
+\begin{euleroutput}
+  95.5
+\end{euleroutput}
+\begin{eulerprompt}
+>r=60.5:5:95.5; v=[2,5,8,10,12,9,4];
+>T:=r[1:7]' | r[2:8]' | v'; writetable(T,labc=["TB","TA","Frek"])
+\end{eulerprompt}
+\begin{euleroutput}
+          TB        TA      Frek
+        60.5      65.5         2
+        65.5      70.5         5
+        70.5      75.5         8
+        75.5      80.5        10
+        80.5      85.5        12
+        85.5      90.5         9
+        90.5      95.5         4
+\end{euleroutput}
+\begin{eulercomment}
+Menentukan titik tengah
+\end{eulercomment}
+\begin{eulerprompt}
+>(T[,1]+T[,2])/2 // the midpoint of each interval
+\end{eulerprompt}
+\begin{euleroutput}
+             63 
+             68 
+             73 
+             78 
+             83 
+             88 
+             93 
+\end{euleroutput}
+\begin{eulerprompt}
+>t=fold(r,[0.5,0.5])
+\end{eulerprompt}
+\begin{euleroutput}
+  [63,  68,  73,  78,  83,  88,  93]
+\end{euleroutput}
+\begin{eulercomment}
+Menentukan mean(rata-rata)
+\end{eulercomment}
+\begin{eulerprompt}
+>mean(t,v)
+\end{eulerprompt}
+\begin{euleroutput}
+  79.8
+\end{euleroutput}
+\begin{eulercomment}
+Diketahui:\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\sum t_i f_i=(2)(63)+(5)(68)+(8)(73)+(10)(78)+(12)(83)+(9)(88)+(4)(93)=3.990
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\sum f_i=2+5+8+10+12+9+4=50
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\bar{X} = \frac{\sum t_i f_i}{\sum f_i}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\bar{X} = \frac{3.990}{50}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\bar{X} = 79,8
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Jadi rata-rata nilai yang diperoleh 50 siswa tersebut adalah 79,8
+
+\end{eulercomment}
+\eulersubheading{3. Perhitungan Rata-Rata dari file yang tersimpan dalam direktori}
+\begin{eulercomment}
+Dalam perhitungan rata-rata hitung(mean), kita dapat menggunakan file
+yang tersimpan dalam direktori.
+
+Contoh 1:\\
+Misalnya kita akan menghitung nilai rata-rata(mean) yang terdapat
+dalam file "test.dat"
+\end{eulercomment}
+\begin{eulerprompt}
+>filename="test.dat"; ...
+>V=random(3,3); writematrix(V,filename);
+>printfile(filename),
+\end{eulerprompt}
+\begin{euleroutput}
+  0.6554163483485531,0.2009951854518572,0.8936223876466522
+  0.2818865431288053,0.5250003829714993,0.3141267749950177
+  0.4446156782993733,0.2994744556282315,0.2826898577756425
+  
+\end{euleroutput}
+\begin{eulerprompt}
+>readmatrix(filename)
+\end{eulerprompt}
+\begin{euleroutput}
+       0.655416      0.200995      0.893622 
+       0.281887         0.525      0.314127 
+       0.444616      0.299474       0.28269 
+\end{euleroutput}
+\begin{eulerprompt}
+>mean(V),
+\end{eulerprompt}
+\begin{euleroutput}
+       0.583345 
+       0.373671 
+        0.34226 
+\end{euleroutput}
+\begin{eulercomment}
+Contoh 2:\\
+Misalnya akan dihitung nilai rata-rata dari file 'mtcars.csv'
+\end{eulercomment}
+\begin{eulerprompt}
+>filename="mtcars.csv";  ...
+>V=random(4,4); writematrix(V,filename);
+>printfile(filename)
+\end{eulerprompt}
+\begin{euleroutput}
+  0.8832274852666707,0.2709059757306277,0.7044190158488305,0.217693385437102
+  0.4453627564273003,0.3084110353211584,0.9145409086421026,0.1935854779811416
+  0.4633868194128757,0.0951529788263157,0.5950170162024192,0.4311837813121366
+  0.7286804774486648,0.4651641815616542,0.3230318624794988,0.5251835885646776
+  
+\end{euleroutput}
+\begin{eulerprompt}
+>readmatrix(filename)
+\end{eulerprompt}
+\begin{euleroutput}
+       0.883227      0.270906      0.704419      0.217693 
+       0.445363      0.308411      0.914541      0.193585 
+       0.463387      0.095153      0.595017      0.431184 
+        0.72868      0.465164      0.323032      0.525184 
+\end{euleroutput}
+\begin{eulerprompt}
+>mean(V[1])
+\end{eulerprompt}
+\begin{euleroutput}
+  0.519061465571
+\end{euleroutput}
+\begin{eulerprompt}
+>mean(V[2])
+\end{eulerprompt}
+\begin{euleroutput}
+  0.465475044593
+\end{euleroutput}
+\begin{eulerprompt}
+>mean(V[3])
+\end{eulerprompt}
+\begin{euleroutput}
+  0.396185148938
+\end{euleroutput}
+\begin{eulerprompt}
+>mean(V[4])
+\end{eulerprompt}
+\begin{euleroutput}
+  0.510515027514
+\end{euleroutput}
+\begin{eulerprompt}
+>mean(V)
+\end{eulerprompt}
+\begin{euleroutput}
+       0.519061 
+       0.465475 
+       0.396185 
+       0.510515 
+\end{euleroutput}
+\eulersubheading{Median}
+\begin{eulercomment}
+Median merupakah ruang lingkup kajian pada analisis statistika
+deskriptif yang termasuk dalam ukuran pemusatan data. Median adalah
+suatu nilai yang berada di tengah data setelah diurutkan dari data
+yang terkecil sampai yang terbesar atau sebaliknya. Dalam perhitungan
+statistik, median dibagi menjadi 2 bagian yaitu median untuk data
+tunggal dan median untuk data kelompok.\\
+\end{eulercomment}
+\eulersubheading{1. Median data tunggal}
+\begin{eulercomment}
+Jika jumlah suatu data(n) berjumlah ganjil maka nilai mediannya adalah
+sama dengan data yang memiliki nilai di urutan paling tengah yang
+memiliki nomor urut k, dimana untuk menentukan nilai k dapat dihitung
+menggunakan rumus:\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+k = \frac{n+1}{2}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Jika jumlah suatu data(n) berjumlah genap,maka untuk menghitung
+mediannya dengan menggunakan rumus:\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+k = \frac{n}{2}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+Me = \frac{1}{2}({X_k+X_{k+1})}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Kita dapat mengetahui nilai median pada data tunggal dengan
+menggunakan perintah EMT yaitu 'median(data)'
+
+Contoh Soal 1:\\
+Diketahui sebuah data hasil nilai Ujian Akhir Semester mata kuliah
+Filsafat Ilmu 11 mahasiswa sebagai berikut:
+85,90,80,95,50,75,30,60,65,40,70.\\
+Tentukan nilai median dari data tersebut!\\
+Penyelesaian:
+\end{eulercomment}
+\begin{eulerprompt}
+>data=[85,90,80,95,50,75,30,60,65,40,70];
+>urut=sort(data)
+\end{eulerprompt}
+\begin{euleroutput}
+  [30,  40,  50,  60,  65,  70,  75,  80,  85,  90,  95]
+\end{euleroutput}
+\begin{eulercomment}
+Dalam menentukan median, langkah pertama yang harus dilakukan adalah
+dengan mengurutkan data tersebut dari yang terkecil sampai yang
+terbesar dengan fungsi sort(data). Fungsi sort(data) dalam EMT
+digunakan untuk mengurutkan elemen-elemen dalam suatu vektor atau
+matriks(dari nilai terkecil ke nilai terbesar).
+\end{eulercomment}
+\begin{eulerprompt}
+>median(data)
+\end{eulerprompt}
+\begin{euleroutput}
+  70
+\end{euleroutput}
+\begin{eulercomment}
+Diketahui bahwa kasus ini merupakan data yang berjumlah ganjil,
+sehingga nilai median untuk kasus ini adalah sama dengan data yang
+memiliki nilai di urutan paling tengah yang memiliki nomor urut k.\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+k = \frac{n+1}{2}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+k = \frac{11+1}{2}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+k = 6
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+Me = X_6 = 70
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Jadi nilai median dari data hasil Ujian Akhir Semester(UAS) mata
+kuliah Filsafat Ilmu 11 mahasiswa adalah 70
+
+Contoh Soal 2:\\
+Data upah dari 8 karyawan yang dinyatakan dalam rupiah adalah sebagai
+berikut:\\
+20,80,75,60,50,85,45,90.\\
+Tentukan nilai median dari data tersebut!\\
+Penyelesaian:
+\end{eulercomment}
+\begin{eulerprompt}
+>data=[20,80,75,60,50,85,45,90];
+>urut=sort(data)
+\end{eulerprompt}
+\begin{euleroutput}
+  [20,  45,  50,  60,  75,  80,  85,  90]
+\end{euleroutput}
+\begin{eulerprompt}
+>median(data)
+\end{eulerprompt}
+\begin{euleroutput}
+  67.5
+\end{euleroutput}
+\begin{eulercomment}
+Diketahui bahwa kasus ini merupakan data yang berjumlah genap,
+sehingga nilai median untuk kasus ini adalah terletak pada data ke-k
+dan data ke-(k+1).\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+k = \frac{n}{2}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+k = \frac{8}{2}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+k = 4
+\]
+\end{eulerformula}
+\begin{eulercomment}
+\end{eulercomment}
+\begin{eulerformula}
+\[
+Me = \frac{1}{2}({X_k+X_{k+1})}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+Me = \frac{1}{2}({X_4+X_{5})}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+Me = \frac{1}{2}({60+75})
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+Me = 67.5
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Jadi nilai median pada data upah 8 karyawan adalah 67.5
+\end{eulercomment}
+\begin{eulercomment}
+
+\end{eulercomment}
+\eulersubheading{2. Median data kelompok}
+\begin{eulercomment}
+Untuk menghitung median pada data kelompok, dapat menggunakan rumus di
+bawah ini:\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+Me = Tb+\frac{\frac {1}{2}{n}-f_{ks}}{f_m}.{p}
+\]
+\end{eulerformula}
+\begin{eulerttcomment}
+   Keterangan:
+      Tb = Tepi bawah kelas median
+       n = Total frekuensi
+     fks = Frekuensi kumulatif sebelum median
+      fm = frekuensi median
+       p = panjang kelas
+\end{eulerttcomment}
+\begin{eulercomment}
+Untuk menghitung median data berkelompok di EMT, dapat dilakukan
+dengan cara berikut:\\
+1. Menentukan tepi bawah kelas (Tb), panjang kelas (P), dan tepi atas
+kelas (Ta) dengan rumus :
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+T_b=a-0,5
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+P=(b-a)+1
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+T_a=b+0.5
+\]
+\end{eulerformula}
+\begin{eulercomment}
+dengan a = batas bawah kelas dan b = batas atas kelas
+
+2. Mendeskripsikan data dalam bentuk tabel, dengan perintah
+
+\textgreater{} r=tepi bawah terkecil:panjang kelas:tepi atas terbesar;
+v=[frekuensi];\\
+\textgreater{} T:=r[1:jumlah kelas]' \textbar{} r[2:jumlah kelas + 1]' \textbar{} v';
+writetable(T,labc=["tepi bawah","tepi atas","frekuensi"]))
+
+3. Mendeskripsikan tepi bawah kelas median, panjang kelas median,
+banyak data,frekuensi kumulatif sebelum median, frekuensi kelas median
+
+\textgreater{} Tb=(tepi bawah kelas median), p=(panjang kelas median), n=(Total
+frekuensi), Fks=(frekuensi kumulatif sebelum median), fm=(frekuensi
+kelas median)
+
+4. Menghitung median data dengan perintah:
+
+\textgreater{} Tb+p*(1/2*n-Fks)/fm
+
+Contoh Soal:\\
+1. Berikut adalah data hasil dari pengukuran berat badan 50 siswa SD
+Negeri Tambakrejo. Dari ke 50 siswa, mayoritas siswa memiliki berat
+badan yang ideal. Siswa yang mempunyai berat badan dalam rentang 21-26
+kg sebanyak 5 orang, yang mempunyai berat badan dalam rentang 27-32 kg
+sebanyak 10 orang, yang mempunyai berat badan dalam rentang 33-38 kg
+sebanyak 12 orang, yang mempunyai berat badan dalam rentang 39-44 kg
+sebanyak 14 orang, yang mempunyai berat badan dalam rentang 45-50 kg
+sebanyak 7 orang, dan yang mempunyai berat badan 51-56 kg sebanyak 2
+orang. Tentukan median dari data hasil pengukuran berat badan 50 siswa
+di SD tersebut!\\
+Penyelesaian:\\
+Menentukan tepi bawah kelas yang terkecil
+\end{eulercomment}
+\begin{eulerprompt}
+>21-0.5
+\end{eulerprompt}
+\begin{euleroutput}
+  20.5
+\end{euleroutput}
+\begin{eulercomment}
+Menentukan panjang kelas
+\end{eulercomment}
+\begin{eulerprompt}
+>(26-21)+1
+\end{eulerprompt}
+\begin{euleroutput}
+  6
+\end{euleroutput}
+\begin{eulercomment}
+Menentukan tepi atas kelas yang terbesar
+\end{eulercomment}
+\begin{eulerprompt}
+>56+0.5
+\end{eulerprompt}
+\begin{euleroutput}
+  56.5
+\end{euleroutput}
+\begin{eulerprompt}
+>r=20.5:6:56.5; v=[5,10,12,14,7,2];
+>T:=r[1:6]' | r[2:7]' | v'; writetable(T,labc=["TB","TA","frek"])
+\end{eulerprompt}
+\begin{euleroutput}
+          TB        TA      frek
+        20.5      26.5         5
+        26.5      32.5        10
+        32.5      38.5        12
+        38.5      44.5        14
+        44.5      50.5         7
+        50.5      56.5         2
+\end{euleroutput}
+\begin{eulercomment}
+Berdasarkan data, median berada pada urutan ke 25, maka median berada
+pada kelas 32.5-38.5.
+\end{eulercomment}
+\begin{eulerprompt}
+>Tb=32.5, p=6, n=50, Fks=15, fm=12
+\end{eulerprompt}
+\begin{euleroutput}
+  32.5
+  6
+  50
+  15
+  12
+\end{euleroutput}
+\begin{eulerprompt}
+>Tb+p*(1/2*n-Fks)/fm
+\end{eulerprompt}
+\begin{euleroutput}
+  37.5
+\end{euleroutput}
+\begin{eulercomment}
+Diketahui bahwa median berada di data ke 25\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+Me = Tb+\frac{\frac {1}{2}{n}-f_{ks}}{f_m}.{p}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+Me = 32.5+\frac{\frac{1}{2}({50})-15}{12}.{6}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+Me = 32.5+5
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+Me = 37.5
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Jadi median dari data hasil pengukuran berat badan 50 siswa SD
+Tambakrejo adalah 37.5
+\end{eulercomment}
+\eulersubheading{Modus}
+\begin{eulercomment}
+Modus merupakan ruang lingkup kajian pada analisis statistika
+deskriptif yang termasuk dalam ukuran pemusatan data. Modus adalah
+nilai yang sering muncul diantara sebaran data atau nilai yang
+memiliki frekuensi tertinggi dalam distribusi data. Modus terdiri dari
+2 jenis yaitu modus untuk data tunggal dan modus untuk data kelompok.\\
+1. Modus data tunggal\\
+\end{eulercomment}
+\begin{eulerttcomment}
+   Cara menentukan modus untuk data tunggal
+   terbilang cukup mudah yaitu dengan
+   mengurutkan data dari yang terkecil ke yang
+   terbesar sehingga data-data yang memiliki
+   nilai yang sama akan berdekatan satu sama
+   lain, lalu mencari frekuensi dari masing-
+   masing data dan pilih data dengan frekuensi
+   tertinggi.
+\end{eulerttcomment}
+\begin{eulercomment}
+2. Modus data kelompok\\
+\end{eulercomment}
+\begin{eulerttcomment}
+   Jika data telah dikelompokkan, maka telah
+   disajikan dalam bentuk distribusi frekuensi.
+   Berikut rumus untuk mencari modus data
+   kelompok:
+\end{eulerttcomment}
+\begin{eulerformula}
+\[
+Mo = Tb+\frac{d_1}{d_1+d_2}.{c}
+\]
+\end{eulerformula}
+\begin{eulerttcomment}
+   Keterangan:
+     Tb = Tepi bawah
+     d1 = selisih f modus dengan f sebelumnya
+     d2 = selisih f modus dengan f sesudahnya
+      c = panjang kelas
+\end{eulerttcomment}
+\begin{eulercomment}
+Untuk menghitung modus data berkelompok di EMT, dapat dilakukan dengan
+cara berikut:\\
+1. Menentukan tepi bawah kelas (Tb), panjang kelas (P), dan tepi atas
+kelas (Ta) dengan rumus :
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+T_b=a-0,5
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+P=(b-a)+1
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+T_a=b+0.5
+\]
+\end{eulerformula}
+\begin{eulercomment}
+dengan a = batas bawah kelas dan b = batas atas kelas
+
+2. Mendeskripsikan data dalam bentuk tabel, dengan perintah
+
+\textgreater{} r=tepi bawah terkecil:panjang kelas:tepi atas terbesar;
+v=[frekuensi];\\
+\textgreater{} T:=r[1:jumlah kelas]' \textbar{} r[2:jumlah kelas + 1]' \textbar{} v';
+writetable(T,labc=["tepi bawah","tepi atas","frekuensi"]))
+
+3. Mendeskripsikan tepi bawah kelas modus, panjang kelas modus,selisih
+frekuensi modus dengan frekuensi sebelumnya, selisih frekuensi modus
+dengan frekuensi sesudahnya
+
+\textgreater{} Tb=(tepi bawah kelas modus), p=(panjang kelas modus), d1=(selisih
+frekuensi modus dengan frekunsi sebelumnya), d2=(selisih frekuensi
+modus dengan frekuensi sesudahnya)
+
+4. Menghitung modus dengan perintah:
+
+\textgreater{} Tb+p*d1/(d1+d2)
+
+Contoh Soal:\\
+1. Berikut adalah data hasil dari pengukuran berat badan 30 siswa SD
+Negeri Tambakrejo. Dari ke 30 siswa, mayoritas siswa memiliki berat
+badan yang ideal. Siswa yang mempunyai berat badan dalam rentang 21-25
+kg sebanyak 2 orang, yang mempunyai berat badan dalam rentang 26-30 kg
+sebanyak 8 orang, yang mempunyai berat badan dalam rentang 31-35 kg
+sebanyak 9 orang, yang mempunyai berat badan dalam rentang 36-40 kg
+sebanyak 6 orang, yang mempunyai berat badan dalam rentang 41-45 kg
+sebanyak 3 orang, dan yang mempunyai berat badan 46-50 kg sebanyak 2
+orang. Tentukan modus dari data hasil pengukuran berat badan 30 siswa
+di SD tersebut!\\
+Penyelesaian:\\
+Menentukan tepi bawah kelas yang terkecil
+\end{eulercomment}
+\begin{eulerprompt}
+>21-0.5
+\end{eulerprompt}
+\begin{euleroutput}
+  20.5
+\end{euleroutput}
+\begin{eulercomment}
+Menentukan panjang kelas
+\end{eulercomment}
+\begin{eulerprompt}
+>(25-21)+1
+\end{eulerprompt}
+\begin{euleroutput}
+  5
+\end{euleroutput}
+\begin{eulercomment}
+Menentukan tepi atas yang terbesar
+\end{eulercomment}
+\begin{eulerprompt}
+>50+0.5
+\end{eulerprompt}
+\begin{euleroutput}
+  50.5
+\end{euleroutput}
+\begin{eulerprompt}
+>r=20.5:5:50.5; v=[2,8,9,6,3,2];
+>T:=r[1:6]' | r[2:7]' | v'; writetable(T,labc=["TB","TA","frek"])
+\end{eulerprompt}
+\begin{euleroutput}
+          TB        TA      frek
+        20.5      25.5         2
+        25.5      30.5         8
+        30.5      35.5         9
+        35.5      40.5         6
+        40.5      45.5         3
+        45.5      50.5         2
+\end{euleroutput}
+\begin{eulercomment}
+Berdasarkan data, modus berada pada kelas 30.5-35.5.
+\end{eulercomment}
+\begin{eulerprompt}
+>Tb=30.5, p=5, d1=1, d2=3
+\end{eulerprompt}
+\begin{euleroutput}
+  30.5
+  5
+  1
+  3
+\end{euleroutput}
+\begin{eulerprompt}
+>Tb+p*d1/(d1+d2)
+\end{eulerprompt}
+\begin{euleroutput}
+  31.75
+\end{euleroutput}
+\begin{eulercomment}
+Jadi modus dari data hasil pengukuran berat badan 30 siswa di SD
+Tambakrejo adalah 31.75
+\end{eulercomment}
+\end{eulernotebook}
+\end{document}
